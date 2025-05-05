@@ -18,7 +18,7 @@ module.exports = function(api) {
           '@utils': './src/utils',
         },
       }],
-      // ['babel-plugin-styled-components']
+      ['babel-plugin-styled-components']
     ],
   };
 };
