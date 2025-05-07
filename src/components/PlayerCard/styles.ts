@@ -1,11 +1,11 @@
-import styled, { css } from 'styled-components/native';
+import styled, { css, DefaultTheme } from 'styled-components/native';
 import { MaterialIcons } from '@expo/vector-icons';
 
 export const Container = styled.View`
   width: 100%;
   height: 56px;
 
-  background-color: ${({ theme }) => theme.COLORS.GRAY_500};
+  background-color: ${({ theme }: { theme: DefaultTheme }) => theme.COLORS.GRAY_500};
   border-radius: 6px;
 
   flex-direction: row;
@@ -18,14 +18,14 @@ export const Container = styled.View`
 export const Name = styled.Text`
   flex: 1;
 
-  ${({ theme }) => css`
+  ${({ theme }: { theme: DefaultTheme }) => css`
     font-size: ${theme.FONT_SIZE.MD}px;
     color: ${theme.COLORS.GRAY_200};
     font-family: ${theme.FONT_FAMILY.REGULAR};
   `}
 `;
 
-export const Icon = styled(MaterialIcons).attrs(({ theme }) => ({
+export const Icon = styled(MaterialIcons).attrs(({ theme }: { theme: DefaultTheme }) => ({
   size: 24,
   color: theme.COLORS.GRAY_200
 }))`
