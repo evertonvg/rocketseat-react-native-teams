@@ -10,7 +10,6 @@ import { Routes } from './src/routes';
 
 export default function App() {
   const [fontsLoaded] = useFonts({ Roboto_400Regular, Roboto_700Bold });
-
   return (
     <ThemeProvider theme={theme}>
       <>
